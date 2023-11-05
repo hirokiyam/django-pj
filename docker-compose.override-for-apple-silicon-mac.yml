@@ -2,4 +2,5 @@ version: '3.8'
 
 services:
   db:
-    image: mysql/mysql-server:5.7
+    image: mysql/mysql-server:8.0
+    platform: linux/amd64
