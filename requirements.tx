@@ -1,2 +1,2 @@
-Django==3.1   # Django3.1
-mysqlclient   # pythonでMySQLに接続するためのドライバ
+Django==3.10   # Django 4.2
+mysqlclient   # MySQLに接続するためのドライバ

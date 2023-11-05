@@ -1,4 +1,6 @@
-version: '3'
+version: '3.8'
+# Apple Silicon の Mac では下記を実行して一部オーバーライドしてください。
+# cp docker-compose.override-for-apple-silicon-mac.yml docker-compose.override.yml
 services:
   db:
     image: mysql:5.7
