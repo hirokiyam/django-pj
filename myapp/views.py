@@ -80,13 +80,13 @@ def save_response(request):
                 "class_field": response_data.get('estimated_data', {}).get('class', None),
                 "confidence": response_data.get('estimated_data', {}).get('confidence', None),
             })
-            # 保存を行う。辞書のキーと値のペアをキーワード引数として関数に渡す。
+            # 保存を行う。辞書のキーと値のペアをキーワード引数として渡す。
             AIAnalysisLog.objects.create(**log_data)
 
             # JSONレスポンスを返す
             return JsonResponse({'status': 'success', 'message': 'API response saved successfully.'})
         else:
-            # 追加データはないのでそのまま保存を行う
+            # エラーの場合追加データはないのでそのまま保存を行う
             AIAnalysisLog.objects.create(**log_data)
             # エラーレスポンスをクライアントに返す
             return JsonResponse({'status': 'error', 'message': 'External API error.'}, status=response.status_code)
