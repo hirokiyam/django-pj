@@ -21,7 +21,7 @@ def save_response(request):
     #     "image_path": "/image/d03f1d36ca69348c51aa/c413eac329e1c0d03/test.jpg"
     # }
 
-    image_path = request_body.get('image_path') # DBに保存する用
+    image_path = request_body.get('image_path')
     # 以下のような値になることを想定
     # "image_path": "/image/d03f1d36ca69348c51aa/c413eac329e1c0d03/test.jpg"
 
