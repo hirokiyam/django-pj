@@ -4,7 +4,7 @@ class AIAnalysisLog(models.Model):
     image_path = models.CharField(max_length=255, blank=True, null=True)
     success = models.CharField(max_length=255, blank=True, null=True)
     message = models.CharField(max_length=255, blank=True, null=True)
-    class_field = models.IntegerField(db_column='class', blank=True, null=True)  # `class`はPythonの予約語なのでfield名として使うことはできません。`db_column`を使用して実際のデータベースのカラム名を指定します。
+    class_field = models.IntegerField(db_column='class', blank=True, null=True)  # `class`はPythonの予約語なのでfield名として使用不可。`db_column`を使用してカラム名とfield名を分ける。
     confidence = models.DecimalField(max_digits=5, decimal_places=4, blank=True, null=True)
     request_timestamp = models.PositiveIntegerField(blank=True, null=True)
     response_timestamp = models.PositiveIntegerField(blank=True, null=True)
